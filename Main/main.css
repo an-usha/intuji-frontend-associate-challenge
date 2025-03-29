@@ -1,24 +1,7 @@
 :root {
-    --clr-primary: #0D163A;
-    --clr-danger: #ff7782;
-    --clr-success: #41f1b6;
     --clr-white: #fff;
-    --clr-info-light: #dce1eb;
-    --clr-light: rgba(132, 139, 200, 0.18);
-    --clr-primary-variant: #4745A4;
-    --background-color: #677483;
     --box-color: #f6f6f9;
-    --icon-color: #F9BA33;
-  
-    --card-border-radius: 2rem;
-    --border-radius-1: 0.4rem;
-    --border-radius-2: 0.8rem;
-    --border-radius-3: 1.2rem;
-  
-    --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
-    --box-shadow: 0 2rem 3rem var(--clr-light);
-  
+    --bg-color: rgba(217, 210, 210, 0.666);
 }
 
 *{
@@ -31,17 +14,17 @@
 
 }
 body{
-    width: 100vh;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1rem;
     overflow-x: hidden;
-    background-color: var(--background-color);
-
+    background-color: var(--bg-color);
 }
+
 .main-container{
     width: 90%;
-    gap: 5rem;
+    gap: 1rem;
     display: grid;
     margin: 0;
     grid-template-columns: 14rem auto 14rem;
@@ -52,9 +35,3 @@ h3{
     font-weight: 400;
     font-size: 0.9rem;
 }
-
-p{
-    color: var(--dark);
-}
-
-
