@@ -30,8 +30,22 @@ body{
     grid-template-columns: 14rem auto 14rem;
 }
 
+.main-container a{
+    text-decoration: none;
+    color: black;
+}
+
 h3{
     color: var(--clr-primary);
     font-weight: 400;
     font-size: 0.9rem;
 }
+
+.sidebar .close  span{
+    display: inline;
+    position: absolute;
+    right: 0;
+    margin-right:30px;
+    font-size: 35px;
+    cursor: pointer;
+ }

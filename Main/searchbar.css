@@ -1,6 +1,7 @@
 :root {
     --clr-white: #fff;
     --border-color :#c4c0c0dc;
+    --box-color: #f6f6f9;
 }
 
 .topBar {
@@ -12,7 +13,6 @@
 
 .searchBar{
     padding: .8rem;
-    margin-bottom: 1rem;
     width: 120vh;
     position: relative;
 }
@@ -37,7 +37,6 @@
     align-items: center;
     background-color: var(--clr-white);
     padding: .7rem;
-    margin-bottom: 1rem;
     border-radius: 3rem;
     gap: .8rem;
 }
