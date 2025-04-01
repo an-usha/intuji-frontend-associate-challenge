@@ -1,47 +1,27 @@
-:root {
-    --clr-white: #fff;
-    --box-color: #f6f6f9;
-    --bg-color: rgba(217, 210, 210, 0.666);
-    --clr-danger: #ff7782;
-    --clr-success: #49ad8b;
-    --clr-primary:rgb(49, 43, 43);
-    --clr-blue: #7381c4;
-    --clr-neutral: #F9BA33;  
-    --clr-small: #ada8a8fc;
-
-
-
-    --card-border-radius: 2rem;
-    --border-radius-1: 0.4rem;
-    --border-radius-2: 0.8rem;
-    --border-radius-3: 1.2rem;
-
-    --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
-    --box-shadow: 0 2rem 3rem var(--bg-color);
-}
-
 .main-content {
+    padding-left: 2rem;
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: repeat(2,1fr);
     gap: 1rem;
-    padding: 1rem;
-    width: auto;
+    width: 130vh;
 }
 
 .main-content .overview,
 .main-content .analytics {
+    width: 100vh;
     background-color: var(--box-color);
     border: 1px solid var(--border-color);
-    padding:1rem;
+    padding:1.5rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .main-content .saving,
 .main-content .recents {
+    width: 40vh;
     background-color: var(--box-color);
     border: 1px solid var(--border-color);
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -75,17 +55,17 @@
 
 .main-content .overview-container> div:hover{
     transition: all .3s ease-in;
-    border: 1px solid var(--clr-blue);
+    border: 1px solid var(--clr-primary-variant);
 }
 
 .balance .right span{
     background-color: var(--clr-success) ;
     color: var(--clr-white);
-    font-size: small;
+    font-size: var(--font-small);
 }
 
 .balance.active{
-    background-color: var(--clr-blue);
+    background-color: var(--clr-primary-variant);
 }
 
 .balance.active .icon{
@@ -100,18 +80,18 @@
 .savings .right span{
     background-color: var(--clr-danger) ;
     color: var(--clr-white);
-    font-size: small;
+    font-size: var(--font-small);
 }
 
 .expense .right span{
-    background-color: var(--clr-neutral) ;
+    background-color: var(--clr-warning) ;
     color: var(--clr-white);
-    font-size: small;
+    font-size: var(--font-small);
 }
 .income .right span{
-    background-color: var(--clr-blue) ;
+    background-color: var(--clr-primary-variant) ;
     color: var(--clr-white);
-    font-size: small;
+    font-size: var(--font-small);
 }
 
 .icon{
@@ -134,7 +114,7 @@
 .top .right span {
     background-color: var(--clr-success);
     color: var(--clr-white);
-    font-size: small;
+    font-size: var(--font-small);
 }
 
 hr {
@@ -150,24 +130,19 @@ hr {
 }
 
 .overview .right>h3{
-    font-size: 20px;
+    font-size: var(--font-larger);
     font-weight: 700;
     padding: .5rem;
 }
 
 .overview .right>p{
-    font-size: 14px;
+    font-size: var(--font-medium);
     font-weight: 100;
     padding: .5rem;
 }
 
 .below .arrow{
     justify-self: end;
-}
-
-.balance a .active {
-    background-color: red;
-    color: white;
 }
 
 
@@ -178,18 +153,19 @@ hr {
     padding-bottom: .5rem;
 }
 
+
 .top a{
-    justify-self: end;
+    justify-self: flex-end;
 }
 
 .top a span{
-    font-size: 14px;
+    font-size: var(--font-medium);
     font-weight: 400;
-    color: var(--clr-blue);
+    color: var(--clr-primary-variant);
 }
 
 .top .right .primary{
-    background-color: var(--clr-blue);
+    background-color: var(--clr-primary-variant);
 }
 
 .top .right .success{
@@ -197,7 +173,7 @@ hr {
 }
 
 .top .right .neutral{
-    background-color: var(--clr-neutral);
+    background-color: var(--clr-warning);
 }
 
 .top .right .danger{
@@ -208,6 +184,7 @@ hr {
 
 /* SAVING PLAN*/
 .item{
+    margin-top: 1rem;
     padding: 1rem;
 }
 
@@ -219,11 +196,12 @@ hr {
 }
 
 .item h3{
-    font-size: 18px;
+    font-size: var(--font-large);
     font-weight: 500;
 }
 .info small{
-    font-size: 12px;
+    justify-self: flex-end;
+    font-size: var(--font-small);
     font-weight: 200;
     color: var(--clr-small);
 }
@@ -256,14 +234,14 @@ hr {
     height: 10px;
     border-radius: 5px;
     width: 48%;
-    background-color: var(--clr-blue);
+    background-color: var(--clr-primary-variant);
 }
 
 .progress-bar .progress-intermediate {
     height: 10px;
     border-radius: 5px;
     width: 79%;
-    background-color: var(--clr-neutral);
+    background-color: var(--clr-warning);
 }
 
 .progress-bar .progress-success {
@@ -278,11 +256,11 @@ hr {
 }
 
 .primary{
-    color: var(--clr-blue);
+    color: var(--clr-primary-variant);
 }
 
 .intermediate{
-    color: var(--clr-neutral);
+    color: var(--clr-warning);
 }
 
 
@@ -317,8 +295,8 @@ hr {
 
 .recent-item h4,
 .amount h4{
-    font-family:'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-family:var(--font-family);
+    font-size: var(--font-large);
     font-weight: 800;
 }
 
@@ -329,7 +307,7 @@ hr {
 }
 
 .amount p{
-    font-size: 14px;
+    font-size: var(--font-medium);
     font-weight: 300;
 
 }
@@ -338,12 +316,170 @@ hr {
 
 .analytics {
     width: 100%;
-    margin: 0 auto;
     padding: 20px;
 }
 
 #myChart {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--font-family);
     width: 100% !important;
     height: 300px !important;
+}
+
+
+/* RESPONSIVE CSS */
+
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content .overview-container {
+        grid-template-columns: 1fr;
+    }
+
+    .overview .right > h3,
+    .overview .right > p {
+        font-size: var(--font-large);
+    }
+
+    .item .info {
+        grid-template-columns: 1fr;
+    }
+
+    .item .progress {
+        grid-template-columns: 1fr;
+    }
+
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top .right {
+        padding-left: 0;
+    }
+
+    .profile-photo img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .recent-item h4,
+    .amount h4 {
+        font-size: var(--font-medium);
+    }
+
+    .amount p {
+        font-size: var(--font-small);
+    }
+
+    .balance .right h3,
+    .balance .right span {
+        font-size: var(--font-small);
+    }
+
+    .progress-bar {
+        height: 8px;
+    }
+
+    .top a span {
+        font-size: var(--font-small);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        padding-left: 1rem;
+    }
+
+    .main-content .overview-container {
+        grid-template-columns: 1fr;
+    }
+
+    .overview .right > h3,
+    .overview .right > p {
+        font-size: var(--font-medium);
+    }
+
+    .item .info {
+        grid-template-columns: 1fr;
+    }
+
+    .item .progress {
+        grid-template-columns: 1fr;
+    }
+
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-photo img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .recent-item h4,
+    .amount h4 {
+        font-size: var(--font-small);
+    }
+
+    .amount p {
+        font-size: var(--font-smaller);
+    }
+
+    .balance .right h3,
+    .balance .right span {
+        font-size: var(--font-smaller);
+    }
+
+    .progress-bar {
+        height: 6px;
+    }
+
+    .top a span {
+        font-size: var(--font-smaller);
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        padding-left: 0.5rem;
+    }
+
+    .overview .right > h3 {
+        font-size: var(--font-large);
+    }
+
+    .overview .right > p {
+        font-size: var(--font-small);
+    }
+
+    .balance .right h3,
+    .balance .right span {
+        font-size: var(--font-smaller);
+    }
+
+    .item .info {
+        grid-template-columns: 1fr;
+    }
+
+    .item .progress {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-bar {
+        height: 6px;
+    }
+
+    .profile-photo img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .top a span {
+        font-size: var(--font-smaller);
+    }
 }

@@ -1,29 +1,35 @@
-:root {
-    --clr-primary: #0D163A;
-    --clr-white: #fff;
-    --clr-primary-variant: #4745A4;
-    --background-color: #677483;
-    --box-color: #f6f6f9;
-    --icon-color: #F9BA33;  
-}
-
-
-.sideBar{
+.sideBar {
     height: auto;
     background-color: var(--box-color);
+    width: 250px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
 }
 
-.sideBar .logo{
+.sideBar .top-sidebar{
+    background: var(--box-color);
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    height: 5rem;
-    background-color: var(--box-color);
+    justify-content: space-between;
+    margin-top: 1.4rem;
 }
 
-.sideBar .top-dashboard{
+.sideBar .top-sidebar .logo {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    width: 100%;              
+}
+
+.sidebar .top-sidebar .logo img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--bg-color);
+}
+
+.sideBar .top-dashboard {
     position: relative;
     height: 40vh;
     display: flex;
@@ -31,13 +37,12 @@
     top: 1rem;
 }
 
-.sideBar .bottom-dashboard{
+.sideBar .bottom-dashboard {
     position: absolute;
     bottom: 1rem;
-
 }
 
-.sideBar a{
+.sideBar a {
     display: flex;
     color: var(--clr-primary);
     font-weight: 400;
@@ -48,31 +53,31 @@
     transition: all .1s ease-in;
 }
 
-.sideBar a span{
+.sideBar a span {
     font-size: 1.5rem;
     transition: all .1s ease-in;
 }
 
-.sideBar a.active{
+.sideBar a.active {
     color: var(--clr-primary);
     margin-left: 0;
     padding: 1.5rem;
     border-left: 3px solid var(--clr-primary-variant);
 }
 
-.sideBar a.active h3{
+.sideBar a.active h3 {
     font-weight: 600;
 }
 
-.sideBar a.active .material-symbols-outlined{
+.sideBar a.active .material-symbols-outlined {
     color: var(--icon-color);
 }
 
-.sideBar a:hover{
+.sideBar a:hover {
     color: var(--clr-primary);
 }
 
-.sideBar a:hover h3{
+.sideBar a:hover h3 {
     font-weight: 700;
     transition: all .1s ease-in;
 }

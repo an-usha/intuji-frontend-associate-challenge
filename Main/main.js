@@ -1,3 +1,5 @@
+
+// GRAPH
 const xValues = ["Sun","Mon","Tue","Wed","Thurs","Fri","Sat"];
 
 new Chart("myChart", {
@@ -40,4 +42,21 @@ new Chart("myChart", {
         }
     }
 }
+});
+
+// DROPDOWN
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    dropdownToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        dropdownMenu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!dropdownToggle.closest(".dropdown").contains(e.target)) {
+            dropdownMenu.classList.remove("show");
+        }
+    });
 });
